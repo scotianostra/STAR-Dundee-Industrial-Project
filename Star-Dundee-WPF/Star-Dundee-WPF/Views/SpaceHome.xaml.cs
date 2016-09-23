@@ -18,7 +18,6 @@ using System.IO;
 using Microsoft.Win32;
 
 
-
 namespace Star_Dundee_WPF
 {
     /// <summary>
@@ -41,7 +40,7 @@ namespace Star_Dundee_WPF
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Multiselect = true;
             openFileDialog.Filter = "Recording files (*.rec;)|*.rec;|All files (*.*)|*.*";
-            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             if (openFileDialog.ShowDialog() == true)
             {
                 string[] files = openFileDialog.FileNames;
@@ -77,8 +76,6 @@ namespace Star_Dundee_WPF
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
-
-
             throw new NotImplementedException();
 
         }
